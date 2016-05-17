@@ -9,7 +9,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Backtrack.write(4,binaries);
+        int length = 4;
+        Backtrack backtrack = new Backtrack(binaries,2);
+        backtrack.generate(length);
+
+        /*output option*/
+        backtrack.setConsoleOutput(false);
+        backtrack.setFile("output.json");
+        backtrack.setJsonWrite(true);
+
+        backtrack.save();
 
 
     }
